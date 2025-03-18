@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - ENEMzadas</title>
+  <link rel="stylesheet" href="../css/cadastro.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">ENEMzada</div>
+    <ul class="nav-links">
+      <li><a href="#">Cadastro</a></li>
+      <li><a href="../views/index.html">Inicio</a></li>
+      <li><a href="#">Planos</a></li>
+      <li><a href="#">Recursos</a></li>
+    </ul>
+    <div class="lang-icon">
+      <img src="/front-end/img/brasil.png" alt="Idioma">
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="form-left">
+      <h2>CADASTRE - SE</h2>
+      <form id="register-form">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" required>
+
+        <p class="senha-info">Crie uma senha de acesso, com 8 letras e/ou números</p>
+
+        <a href="#">Já tenho conta</a>
+
+        <button type="submit">Cadastrar</button>
+
+        <div class="social-icons">
+          <a href="#"><img src="/front-end/img/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="/front-end/img/google.png" alt="Google"></a>
+          <a href="#"><img src="/front-end/img/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </form>
+    </div>
+    <div class="image-right">
+      <h2>Faça agora seu cadastro</h2>
+      <p>Conteúdos exclusivos e inéditos</p>
+      <img src="/front-end/img/astronauta.png" alt="Astronauta estudando">
+    </div>
+  </div>
+
+  <footer>
+    <p>Este site está protegido com a tecnologia reCaptcha do Google.</p>
+    <p>Todos os seus dados estão seguros e criptografados.</p>
+    <a href="#">Termos de Uso e Políticas de Privacidade.</a>
+  </footer>
+
+  <script src="/front-end/js/app.js"></script>
+</body>
+</html>
