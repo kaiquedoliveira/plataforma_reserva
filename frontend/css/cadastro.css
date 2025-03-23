@@ -1,126 +1,203 @@
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Garantir que o body ocupe 100% da altura da tela */
+html, body {
+  height: 100%;
+  overflow: hidden;  /* Impede a rolagem da página */
+}
+
+/* Navbar transparente com efeito de vidro */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0); /* Totalmente transparente */
+  backdrop-filter: blur(15px); /* Efeito de desfoque forte */
+  padding: 15px 50px;
+  box-shadow: 0 2px 4px rgba(114, 113, 113, 0.2); /* Sombras sutis para profundidade */
+  height: 60px;
+  border-radius: 10px; /* Bordas arredondadas */
+  position: fixed; /* Fixa a navbar no topo */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; /* Garantir que a navbar esteja acima de outros elementos */
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Links do menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(243, 243, 243, 0.3); /* Transparente para os links */
+  padding: 5px 20px;
+  border-radius: 15px;
+  transition: background-color 0.5s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.5); /* Efeito de hover mais visível */
+}
+
+/* Ícone de idioma */
+.lang-icon img {
+  width: 24px;
+}
+
+/* Layout Principal */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Garante que o contêiner ocupe 100% da altura da tela */
+  padding: 250px;
+  background-image: url('../images/indexImagem.png'); /* A imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Formulário mais destacado */
+.form-left {
+  background: rgba(51, 2, 90, 0.15);
+  padding: 50px;
+  border-radius: 12px;
+  width: 650px;
+  backdrop-filter: blur(10px);
   
-  /* Navbar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #2b004d;
-    padding: 15px 50px;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-  }
-  
-  .nav-links li {
-    margin: 0 15px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .lang-icon img {
-    width: 24px;
-  }
-  
-  /* Layout Principal */
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 85vh;
-    padding: 50px;
-    background: linear-gradient(to right, #3b006e, #1a002d);
-    color: white;
-  }
-  
-  /* Formulário */
-  .form-left {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 8px;
-    width: 400px;
-  }
-  
-  .form-left h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-top: 10px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: none;
-  }
-  
-  .senha-info {
-    font-size: 12px;
-    color: #ddd;
-    margin-top: 5px;
-  }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    background: #6800b3;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
-  }
-  
-  .social-icons img {
-    width: 30px;
-    cursor: pointer;
-  }
-  
-  /* Imagem */
-  .image-right {
-    text-align: center;
-  }
-  
-  .image-right img {
-    width: 300px;
-  }
-  
-  /* Rodapé */
-  footer {
-    text-align: center;
-    padding: 20px;
-    background: #2b004d;
-    color: white;
-    font-size: 12px;
-  }
-  
+}
+
+.form-left h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: rgb(236, 236, 236);
+}
+
+/* Estilo dos labels */
+label {
+  display: block;
+  margin-top: 10px;
+  color: white;
+}
+
+/* Estilo dos inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: none;
+}
+
+/* Informações de senha */
+.senha-info {
+  font-size: 12px;
+  color: #e0dada;
+  margin-top: 5px;
+}
+
+/* Botões */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #16a085;
+}
+
+/* Ícones de redes sociais */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 35px;
+  cursor: pointer;
+}
+
+/* Ajustando o tamanho da imagem do astronauta */
+.image-right {
+  text-align: center;
+  position: relative; /* Necessário para posicionar o texto sobre a imagem */
+  width: 100%; /* Garante que a imagem ocupe a largura total */
+}
+
+.image-right img {
+  width: 100%; /* Imagem ocupa toda a largura */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 0; /* Remove as bordas arredondadas */
+  box-shadow: none; /* Remove o efeito de sombra */
+  margin-left: 17%;
+}
+
+/* Estilo para o texto no topo da imagem */
+.image-right h3 {
+  position: absolute; /* Posiciona o texto sobre a imagem */
+  top: 10%; /* Coloca o texto no topo da imagem */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-20%); /* Ajusta para que o texto fique no centro horizontal */
+  color: white; /* Cor do texto */
+  font-size: 30px; /* Tamanho da fonte */
+  font-weight: bold; /* Destacar o texto */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Estilo para o texto na parte inferior da imagem */
+.image-right p {
+  position: absolute;
+  bottom: 10%; /* Coloca o texto na parte inferior da imagem */
+  left: 40%; /* Centraliza horizontalmente */
+  transform: translateX(-1%); /* Ajusta para que o texto fique no centro horizontal */
+  color: white; /* Cor do texto */
+  font-size: 30px; /* Tamanho da fonte */
+  font-weight: bold; /* Destacar o texto */
+  padding: 6px;
+  border-radius: 5px;
+}
+
+/* Footer translúcido */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(38, 7, 61, 0.6);
+  color: white;
+  font-size: 12px;
+}
