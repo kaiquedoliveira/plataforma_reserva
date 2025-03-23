@@ -17,12 +17,12 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0); /* Totalmente transparente */
+  background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px); /* Efeito de desfoque forte */
   padding: 15px 50px;
-  box-shadow: 0 2px 4px rgba(114, 113, 113, 0.2); /* Sombras sutis para profundidade */
+  box-shadow: 0 2px 4px rgba(114, 113, 113, 0.2);
   height: 60px;
-  border-radius: 10px; /* Bordas arredondadas */
+  border-radius: 0px; /* Bordas arredondadas */
   position: fixed; /* Fixa a navbar no topo */
   top: 0;
   left: 0;
@@ -34,6 +34,7 @@ html, body {
 .logo {
   font-size: 24px;
   font-weight: bold;
+  font-family: 'Nunito', sans-serif;
   color: white;
 }
 
@@ -47,7 +48,7 @@ html, body {
 }
 
 .nav-links li {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 .nav-links a {
@@ -61,7 +62,7 @@ html, body {
 }
 
 .nav-links a:hover {
-  background-color: rgba(255, 255, 255, 0.5); /* Efeito de hover mais visível */
+  background-color: rgba(53, 36, 66, 0.5); /* Efeito de hover mais visível */
 }
 
 /* Ícone de idioma */
@@ -84,7 +85,7 @@ html, body {
 
 /* Formulário mais destacado */
 .form-left {
-  background: rgba(51, 2, 90, 0.15);
+  background: rgba(17, 0, 31, 0.15);
   padding: 50px;
   border-radius: 12px;
   width: 650px;
@@ -136,7 +137,7 @@ button {
 }
 
 button:hover {
-  background: #16a085;
+  background: #712c8f;
 }
 
 /* Ícones de redes sociais */

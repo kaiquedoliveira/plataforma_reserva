@@ -79,17 +79,17 @@ main.content {
 }
 
 .text-left h1 {
-  font-size: 3.1rem;
-  margin-bottom: 15px;
+  font-size: 2.5rem;
+  margin-bottom: 17px;
   color: #ffffff; /* Branco */
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
 }
 
 .text-left p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 20px;
-  color: #bdc3c7; /* Cinza claro */
+  color: #c9cdcf; /* Cinza claro */
   font-family: 'Nunito', sans-serif;
 }
 
@@ -117,7 +117,6 @@ main.content {
 
 .image-right img {
   max-width: 100%; /* Tamanho máximo da imagem */
-  height: 709px;
-  border-radius: 10px; /* Bordas arredondadas */
-  box-shadow: 0 4px 8px rgba(241, 236, 236, 0.3); /* Sombra leve */
+  height: 409px;
+  border-radius: 0px; /* Bordas arredondadas */
 }
