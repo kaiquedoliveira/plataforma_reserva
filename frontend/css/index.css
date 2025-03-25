@@ -27,6 +27,27 @@ body {
     
 }
 
+/* Logo */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgb(200, 163, 207), 0 0 10px rgb(72, 30, 128), 0 0 15px rgb(231, 231, 231), 0 0 20px #46109e;
+  }
+  100% {
+    text-shadow: 0 0 10px rgb(120, 54, 122), 0 0 20px rgb(145, 105, 172), 0 0 30px rgb(255, 255, 255), 0 0 40px #4f0a88;
+  }
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+  color: rgb(255, 255, 255);
+  animation: glow 1.5s infinite alternate, float 3s ease-in-out infinite;
+}
+
+
+
+
 header nav {
   display: flex;
   justify-content: space-between;
@@ -34,7 +55,7 @@ header nav {
   padding: 5px 20px; /* Reduzi o padding para diminuir a altura */
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 2px 4px rgba(114, 113, 113, 0.2);
-  height: 60px; /* Define uma altura menor para a navbar */
+  height: 60px; /* altura menor para a navbar */
 }
 
 
@@ -81,7 +102,7 @@ main.content {
 .text-left h1 {
   font-size: 2.5rem;
   margin-bottom: 17px;
-  color: #ffffff; /* Branco */
+  color: #ffffff; 
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
 }
@@ -89,7 +110,7 @@ main.content {
 .text-left p {
   font-size: 1.4rem;
   margin-bottom: 20px;
-  color: #c9cdcf; /* Cinza claro */
+  color: #c9cdcf; 
   font-family: 'Nunito', sans-serif;
 }
 
@@ -118,5 +139,5 @@ main.content {
 .image-right img {
   max-width: 100%; /* Tamanho máximo da imagem */
   height: 409px;
-  border-radius: 0px; /* Bordas arredondadas */
+  border-radius: 0px; 
 }

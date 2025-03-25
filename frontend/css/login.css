@@ -1,150 +1,164 @@
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Garantir que o body ocupe 100% da altura da tela */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Navbar - Igual à do cadastro */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 15px 50px;
+  box-shadow: 0 2px 4px rgba(114, 113, 113, 0.2);
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* Logo */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgb(200, 163, 207), 0 0 10px rgb(72, 30, 128), 0 0 15px rgb(231, 231, 231), 0 0 20px #46109e;
   }
-  
-  /* Garantir que o body ocupe 100% da altura da tela */
-  html, body {
-    height: 100%;
-    overflow: hidden;
+  100% {
+    text-shadow: 0 0 10px rgb(120, 54, 122), 0 0 20px rgb(145, 105, 172), 0 0 30px rgb(255, 255, 255), 0 0 40px #4f0a88;
   }
-  
-  /* Navbar - Igual à do cadastro */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    padding: 15px 50px;
-    box-shadow: 0 2px 4px rgba(114, 113, 113, 0.2);
-    height: 60px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-  }
-  
-  /* Logo */
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    font-family: 'Nunito', sans-serif;
-    color: white;
-  }
-  
-  /* Links do menu */
-  .nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .nav-links li {
-    margin: 0 10px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    background-color: rgba(243, 243, 243, 0.3);
-    padding: 5px 20px;
-    border-radius: 15px;
-    transition: background-color 0.5s ease;
-  }
-  
-  .nav-links a:hover {
-    background-color: rgba(53, 36, 66, 0.5);
-  }
-  
-  /* Layout Principal */
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 250px;
-    background-image: url('../images/indexImagem.png'); /* Mantendo a mesma imagem do cadastro */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  /* Formulário */
-  .form-left {
-    background: rgba(17, 0, 31, 0.15);
-    padding: 50px;
-    border-radius: 12px;
-    width: 650px;
-    backdrop-filter: blur(10px);
-  }
-  
-  .form-left h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    color: rgb(236, 236, 236);
-  }
-  
-  label {
-    display: block;
-    margin-top: 10px;
-    color: white;
-  }
-  
-  input {
-    width: 100%;
-    padding: 12px;
-    margin-top: 5px;
-    border-radius: 6px;
-    border: none;
-  }
-  
-  button {
-    width: 100%;
-    padding: 12px;
-    background: #1abc9c;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 15px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background: #712c8f;
-  }
-  
-  /* Link para cadastro */
-  .cadastro-link {
-    text-align: center;
-    margin-top: 15px;
-  }
-  
-  .cadastro-link a {
-    color: #1abc9c;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .cadastro-link a:hover {
-    color: #712c8f;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(38, 7, 61, 0.6);
-    color: white;
-    font-size: 12px;
-  }
-  
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+  color: rgb(255, 255, 255);
+  animation: glow 1.5s infinite alternate, float 3s ease-in-out infinite;
+}
+
+
+
+
+/* Links do menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(243, 243, 243, 0.3);
+  padding: 5px 20px;
+  border-radius: 15px;
+  transition: background-color 0.5s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(53, 36, 66, 0.5);
+}
+
+/* Layout Principal */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 250px;
+  background-image: url('../images/indexImagem.png'); /* Mantendo a mesma imagem do cadastro */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Formulário */
+.form-left {
+  background: rgba(17, 0, 31, 0.4); /* Aumentando a opacidade para maior visibilidade */
+  padding: 50px;
+  border-radius: 12px;
+  width: 650px;
+  backdrop-filter: blur(15px); /* Aumentando o desfoque para destacar o formulário */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Adicionando um leve brilho */
+}
+
+.form-left h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: rgb(236, 236, 236);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  color: white;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #712c8f;
+}
+
+/* Link para cadastro */
+.cadastro-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.cadastro-link a {
+  color: #00aaff; /* Azul claro */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  padding: 6px;
+}
+
+.cadastro-link a:hover {
+  color: #0077cc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(38, 7, 61, 0.6);
+  color: white;
+  font-size: 12px;
+}
