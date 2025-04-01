@@ -79,7 +79,7 @@ html, body {
 /* Layout Principal */
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100vh;
   padding: 250px;
@@ -97,6 +97,7 @@ html, body {
   width: 650px;
   backdrop-filter: blur(15px); /* Aumentando o desfoque para destacar o formulário */
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Adicionando um leve brilho */
+ 
 }
 
 .form-left h2 {
@@ -161,4 +162,58 @@ footer {
   background: rgba(38, 7, 61, 0.6);
   color: white;
   font-size: 12px;
+}
+
+
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 35px;
+  cursor: pointer;
+}
+
+/* Ajustando o tamanho da imagem do astronauta */
+.img-login {
+  text-align: center;
+  position: relative; /* Necessário para posicionar o texto sobre a imagem */
+  width: 100%; /* Garante que a imagem ocupe a largura total */
+}
+
+.img-login img {
+  width: 80%; /* Imagem ocupa toda a largura */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 0; /* Remove as bordas arredondadas */
+  box-shadow: none; /* Remove o efeito de sombra */
+  margin-left: 26%;
+}
+
+.img-login h3 {
+  position: absolute; /* Posiciona o texto sobre a imagem */
+  top: -8%; /* Coloca o texto no topo da imagem */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-20%); /* Ajusta para que o texto fique no centro horizontal */
+  color: white; /* Cor do texto */
+  font-size: 25px; /* Tamanho da fonte */
+  font-weight: bold; /* Destacar o texto */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Estilo para o texto na parte inferior da imagem */
+.img-login p {
+  position: absolute;
+  bottom: -15%; /* Coloca o texto na parte inferior da imagem */
+  left: 40%; /* Centraliza horizontalmente */
+  transform: translateX(-1%); /* Ajusta para que o texto fique no centro horizontal */
+  color: white; /* Cor do texto */
+  font-size: 25px; /* Tamanho da fonte */
+  font-weight: bold; /* Destacar o texto */
+  padding: 6px;
+  border-radius: 5px;
 }
