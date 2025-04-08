@@ -164,8 +164,6 @@ footer {
   font-size: 12px;
 }
 
-
-
 .social-icons {
   display: flex;
   justify-content: center;
@@ -177,6 +175,7 @@ footer {
   width: 35px;
   cursor: pointer;
 }
+
 
 /* Ajustando o tamanho da imagem do astronauta */
 .img-login {
