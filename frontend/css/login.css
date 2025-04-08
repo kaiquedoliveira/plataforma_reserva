@@ -162,3 +162,16 @@ footer {
   color: white;
   font-size: 12px;
 }
+
+/* Ícones de redes sociais */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 35px;
+  cursor: pointer;
+}
