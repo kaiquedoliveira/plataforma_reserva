@@ -1,0 +1,127 @@
+/* Reset e estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Corpo da página */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #2c3e50; /* Fundo azul escuro */
+    color: #fcffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante altura mínima da página */
+    background-image: url('../images/indexImagem.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  /* Navbar fixa no topo */
+  .navbar {
+    display: flex; /* Usa flexbox para organizar os itens horizontalmente */
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
+    align-items: center; /* Centraliza os itens verticalmente */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    backdrop-filter: blur(15px); /* Efeito de desfoque no fundo */
+    padding: 15px 50px; /* Espaçamento interno */
+    box-shadow: 0 2px 4px rgba(114, 113, 113, 0.2); /* Sombra leve abaixo da navbar */
+    height: 60px; /* Define a altura da navbar */
+    position: fixed; /* Fixa a navbar no topo da página */
+    top: 0; /* Posiciona no topo */
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    z-index: 10; /* Garante que a navbar fique acima de outros elementos */
+  }
+  
+  .navbar .logo {
+    font-size: 1.8rem; /* Tamanho do texto do logo */
+    font-weight: bold; /* Deixa o logo em negrito */
+    color: #ffffff; /* Define a cor do texto como branco */
+  }
+  
+  .navbar .nav-links {
+    display: flex; /* Usa flexbox para organizar os botões horizontalmente */
+    gap: 15px; /* Espaçamento entre os botões */
+  }
+  
+  .navbar .btn {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    padding: 8px 15px; /* Define espaçamento interno */
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo translúcido leve */
+    color: #ffffff; /* Cor do texto */
+    border-radius: 10px; /* Cantos arredondados */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o cursor */
+  }
+  
+  .navbar .btn:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Clareia o fundo ao passar o mouse */
+  }
+  
+  /* Container de Notícias */
+  .noticias-container {
+    text-align: center; /* Centraliza o texto no contêiner */
+    margin: 80px auto; /* Adiciona margem ao topo para compensar a navbar fixa */
+    max-width: 800px; /* Define uma largura máxima para o contêiner */
+    padding: 20px; /* Espaçamento interno */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo translúcido leve */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para profundidade */
+  }
+  
+  .noticias-container h1 {
+    font-size: 2.5rem; /* Define o tamanho do título principal */
+    margin-bottom: 15px; /* Espaçamento abaixo do título */
+    color: #ffffff; /* Cor do título */
+  }
+  
+  .noticias-container p {
+    font-size: 1rem; /* Define o tamanho do texto do parágrafo */
+    margin-bottom: 30px; /* Espaçamento abaixo do parágrafo */
+    color: #c9cdcf; /* Cor do texto com contraste suave */
+  }
+  
+  .noticia {
+    margin-bottom: 20px; /* Espaçamento entre as notícias */
+    padding: 15px; /* Espaçamento interno */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo translúcido leve */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve para profundidade */
+  }
+  
+  .noticia h2 {
+    font-size: 1.5rem; /* Tamanho do título da notícia */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+  }
+  
+  .noticia p {
+    font-size: 1rem; /* Tamanho do texto do parágrafo */
+    color: #c9cdcf; /* Cor do texto com contraste suave */
+  }
+  
+  .noticia .btn-leia-mais {
+    text-decoration: none; /* Remove sublinhado do botão */
+    background-color: #1abc9c; /* Fundo verde vibrante */
+    color: #ffffff; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Cantos arredondados */
+    font-size: 1rem; /* Tamanho do texto do botão */
+    transition: background-color 0.3s ease; /* Adiciona transição suave no hover */
+  }
+  
+  .noticia .btn-leia-mais:hover {
+    background-color: #16a085; /* Tom mais escuro de verde ao passar o mouse */
+  }
+  
+  /* Rodapé */
+  footer {
+    text-align: center; /* Centraliza o texto do rodapé */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto translúcido */
+    padding: 10px; /* Espaçamento interno */
+    color: #ffffff; /* Cor do texto */
+    margin-top: auto; /* Posiciona o rodapé ao final da página */
+  }
