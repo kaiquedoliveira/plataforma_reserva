@@ -1,0 +1,207 @@
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte mais moderna */
+    background-color: #f5f5f5;
+    display: flex;
+    height: 100%;
+    flex-direction: column; /* Organiza o layout da página */
+}
+
+/* Barra de Navegação */
+header {
+    width: 100%;
+    background-color: #5e2a84; /* Roxo mais vibrante */
+    padding: 20px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    display: flex;
+    justify-content: space-between; /* Para posicionar logo à esquerda */
+    align-items: center;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+header:hover {
+    background-color: #6c3483; /* Roxo mais claro ao passar o mouse */
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Efeito de ampliação ao passar o mouse */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #9b59b6; /* Roxo claro para o hover */
+    transform: translateY(-3px); /* Efeito de elevação ao passar o mouse */
+}
+
+/* Barra Lateral */
+.sidebar {
+    width: 270px;
+    height: 100vh;
+    background-color: #8e44ad; /* Roxo forte e vibrante */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    padding-top: 40px; /* Ajusta a altura da barra lateral para acomodar o header */
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1); /* Sombra ao lado da barra lateral */
+    transition: transform 0.3s ease;
+}
+
+.sidebar:hover {
+    transform: translateX(10px); /* Efeito de deslocamento ao passar o mouse */
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 25px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #9b59b6; /* Roxo claro */
+    padding-left: 10px; /* Efeito de deslizar à esquerda */
+}
+
+/* Conteúdo Principal */
+.container {
+    display: flex;
+    flex: 1;
+    margin-left: 270px; /* Espaço para a barra lateral */
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #ecf0f1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.content-header h1 {
+    font-size: 3rem;
+    color: #6c3483; /* Roxo mais claro */
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.content-header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px; /* Limita a largura da grid */
+    width: 100%;
+    padding: 0 20px; /* Adiciona um espaçamento ao redor do grid */
+}
+
+.grid-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px; /* Bordas mais arredondadas */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.grid-item:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* Elevação ao passar o mouse */
+}
+
+.grid-item h2 {
+    font-size: 2rem;
+    color: #6c3483; /* Roxo mais claro para os títulos das opções */
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.grid-item p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.grid-item .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #9b59b6; /* Roxo claro para o botão */
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.grid-item .btn:hover {
+    background-color: #8e44ad; /* Roxo mais escuro para o hover do botão */
+    transform: translateY(-3px); /* Efeito de elevação no botão */
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
