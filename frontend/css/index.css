@@ -58,9 +58,7 @@ header nav {
   height: 60px; /* altura menor para a navbar */
 }
 
-
-
-.nav-links {
+.nav-list {
   display: flex;
   justify-content: right; /* Centraliza os botões */
   align-items: center;
@@ -68,22 +66,37 @@ header nav {
   gap: 15px; /* Adiciona espaço entre os botões */
 }
 
-
-.nav-links .btn {
-  margin-left: 15px;
-  padding: 5px 20px;
-  background-color: rgba(243, 243, 243, 0.3);
-  color: #ffffff;
-  border-radius: 15px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: background-color 0.5s ease;
- 
-  
+.nav-item {
+  margin: 0 20px;
 }
 
-.nav-links .btn:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Efeito 1: Sublinhado que cresce */
+.nav-link.effect-1:hover {
+  color: #8602a0;
+}
+
+.nav-link.effect-1::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #8602a0;
+  transition: width 0.3s ease;
+}
+
+.nav-link.effect-1:hover::after {
+  width: 100%;
 }
 
 main.content {

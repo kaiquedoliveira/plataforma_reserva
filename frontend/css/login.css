@@ -51,29 +51,53 @@ html, body {
 
 
 /* Links do menu */
-.nav-links {
-  list-style: none;
+header nav {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 15px;
+
 }
 
-.nav-links li {
-  margin: 0 10px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
+.nav-list {
+  display: flex;
+  justify-content: center; /* Centraliza os botões */
+  align-items: center;
+  flex-grow: 1; /* Permite que os botões ocupem o espaço necessário */
+  gap: 15px; /* Adiciona espaço entre os botões */
   font-weight: bold;
-  background-color: rgba(243, 243, 243, 0.3);
-  padding: 5px 20px;
-  border-radius: 15px;
-  transition: background-color 0.5s ease;
 }
 
-.nav-links a:hover {
-  background-color: rgba(53, 36, 66, 0.5);
+.nav-item {
+  margin: 0 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Efeito 1: Sublinhado que cresce */
+.nav-link.effect-1:hover {
+  color: #8602a0;
+}
+
+.nav-link.effect-1::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #8602a0;
+  transition: width 0.3s ease;
+}
+
+.nav-link.effect-1:hover::after {
+  width: 100%;
 }
 
 /* Layout Principal */
