@@ -47,8 +47,20 @@ html, body {
   animation: glow 1.5s infinite alternate, float 3s ease-in-out infinite;
 }
 
+.parent-lang-icon {
+  display: flex; /* Alinha as divs horizontalmente */
+  gap: 15px; /* Espaço entre as divs */
+  position: fixed;
+  top: 20px;
+  right: 50px;
+  z-index: 100;
+}
 
-
+.lang-icon img {
+  width: 27px; /* Tamanho das bandeiras */
+  height: auto;
+  cursor: pointer;
+}
 
 /* Links do menu */
 header nav {
@@ -63,7 +75,7 @@ header nav {
   justify-content: center; /* Centraliza os botões */
   align-items: center;
   flex-grow: 1; /* Permite que os botões ocupem o espaço necessário */
-  gap: 15px; /* Adiciona espaço entre os botões */
+  gap: 20px; /* Adiciona espaço entre os botões */
   font-weight: bold;
 }
 

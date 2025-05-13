@@ -27,6 +27,22 @@ body {
     
 }
 
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 15px 50px;
+  box-shadow: 0 2px 4px rgba(114, 113, 113, 0.2);
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
 /* Logo */
 @keyframes glow {
   0% {
@@ -45,11 +61,13 @@ body {
   animation: glow 1.5s infinite alternate, float 3s ease-in-out infinite;
 }
 
-.lang-icon {
+
+  
+.parent-lang-icon {
   display: flex; 
   gap: 4px; 
   position: fixed;
- top: 15px;
+  top: 15px;
   right: 50px;
   z-index: 100;
 }
@@ -60,7 +78,9 @@ body {
   cursor: pointer;
 }
 
-header nav {
+
+  
+.header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,7 +88,10 @@ header nav {
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 2px 4px rgba(114, 113, 113, 0.2);
   height: 60px; /* altura menor para a navbar */
+  ;
 }
+
+
 
 .nav-list {
   display: flex;
@@ -110,7 +133,6 @@ header nav {
 .nav-link.effect-1:hover::after {
   width: 100%;
 }
-
 main.content {
   display: flex;
   flex: 1;
@@ -159,12 +181,11 @@ main.content {
   display: flex;
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
-   margin-top: -35px;
 }
 
 .image-right img {
   max-width: 100%; /* Tamanho máximo da imagem */
   height: 409px;
   border-radius: 0px; 
-   margin-top: -35px;
 }
+

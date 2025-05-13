@@ -9,25 +9,24 @@
 /* Garantir que o body ocupe 100% da altura da tela */
 html, body {
   height: 100%;
-  overflow: hidden;  /* Impede a rolagem da página */
+  overflow: hidden;
 }
 
-/* Navbar transparente com efeito de vidro */
+/* Navbar - Igual à do cadastro */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px); /* Efeito de desfoque forte */
+  backdrop-filter: blur(15px);
   padding: 15px 50px;
   box-shadow: 0 2px 4px rgba(114, 113, 113, 0.2);
   height: 60px;
-  border-radius: 0px; /* Bordas arredondadas */
-  position: fixed; /* Fixa a navbar no topo */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10; /* Garantir que a navbar esteja acima de outros elementos */
+  z-index: 10;
 }
 
 /* Logo */
@@ -50,12 +49,12 @@ html, body {
 
 
 
-header nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+ /* Ícone de idioma */
+ .lang-icon img {
+  width: 27px;
 }
+
+/* Links do menu */
 
 .nav-list {
   display: flex;
@@ -63,6 +62,7 @@ header nav {
   align-items: center;
   flex-grow: 1; /* Permite que os botões ocupem o espaço necessário */
   gap: 20px; /* Adiciona espaço entre os botões */
+  font-weight: bold;
 }
 
 .nav-item {
@@ -76,7 +76,6 @@ header nav {
   position: relative;
   padding: 5px 0;
   transition: all 0.3s ease;
-  font-weight: bold;
 }
 
 /* Efeito 1: Sublinhado que cresce */
@@ -99,19 +98,14 @@ header nav {
   width: 100%;
 }
 
-/* Ícone de idioma */
-.lang-icon img {
-  width: 27px;
-}
-
 /* Layout Principal */
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh; /* Garante que o contêiner ocupe 100% da altura da tela */
+  height: 100vh;
   padding: 250px;
-  background-image: url('../images/indexImagem.png'); /* A imagem de fundo */
+  background-image: url('../images/indexImagem.png'); /* Mantendo a mesma imagem do cadastro */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -125,6 +119,7 @@ header nav {
   width: 650px;
   backdrop-filter: blur(15px); /* Aumentando o desfoque para destacar o formulário */
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Adicionando um leve brilho */
+ 
 }
 
 .form-left h2 {
@@ -133,27 +128,12 @@ header nav {
   color: rgb(236, 236, 236);
 }
 
-/* Estilo para o link "Já tenho uma conta" */
-.form-link a {
-  text-decoration: none; /* Remove o sublinhado */
-  color: #00bfff; /* Azul claro */
-  font-weight: bold;
-  transition: color 0.3s ease; /* Efeito de transição suave */
-}
-
-.form-link a:hover {
-  color: #1e90ff; /* Azul mais forte no hover */
-}
-
-
-/* Estilo dos labels */
 label {
   display: block;
   margin-top: 10px;
   color: white;
 }
 
-/* Estilo dos inputs */
 input {
   width: 100%;
   padding: 12px;
@@ -162,18 +142,10 @@ input {
   border: none;
 }
 
-/* Informações de senha */
-.senha-info {
-  font-size: 12px;
-  color: #e0dada;
-  margin-top: 5px;
-}
-
-/* Botões */
 button {
   width: 100%;
   padding: 12px;
-  background: #1a53bc;
+  background: #1e90ff;
   color: white;
   border: none;
   border-radius: 6px;
@@ -187,7 +159,33 @@ button:hover {
   background: #712c8f;
 }
 
-/* Ícones de redes sociais */
+/* Link para cadastro */
+.cadastro-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.cadastro-link a {
+  color: #00aaff; /* Azul claro */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  padding: 6px;
+}
+
+.cadastro-link a:hover {
+  color: #0077cc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(38, 7, 61, 0.6);
+  color: white;
+  font-size: 12px;
+}
+
 .social-icons {
   display: flex;
   justify-content: center;
@@ -200,52 +198,43 @@ button:hover {
   cursor: pointer;
 }
 
+
 /* Ajustando o tamanho da imagem do astronauta */
-.image-right {
+.img-login {
   text-align: center;
   position: relative; /* Necessário para posicionar o texto sobre a imagem */
   width: 100%; /* Garante que a imagem ocupe a largura total */
 }
 
-.image-right img {
-  width: 100%; /* Imagem ocupa toda a largura */
+.img-login img {
+  width: 80%; /* Imagem ocupa toda a largura */
   height: auto; /* Mantém a proporção da imagem */
   border-radius: 0; /* Remove as bordas arredondadas */
   box-shadow: none; /* Remove o efeito de sombra */
-  margin-left: 17%;
+  margin-left: 26%;
 }
 
-/* Estilo para o texto no topo da imagem */
-.image-right h3 {
+.img-login h3 {
   position: absolute; /* Posiciona o texto sobre a imagem */
-  top: 10%; /* Coloca o texto no topo da imagem */
+  top: -8%; /* Coloca o texto no topo da imagem */
   left: 50%; /* Centraliza horizontalmente */
   transform: translateX(-20%); /* Ajusta para que o texto fique no centro horizontal */
   color: white; /* Cor do texto */
-  font-size: 30px; /* Tamanho da fonte */
+  font-size: 25px; /* Tamanho da fonte */
   font-weight: bold; /* Destacar o texto */
   padding: 20px;
   border-radius: 5px;
 }
 
 /* Estilo para o texto na parte inferior da imagem */
-.image-right p {
+.img-login p {
   position: absolute;
-  bottom: 10%; /* Coloca o texto na parte inferior da imagem */
+  bottom: -15%; /* Coloca o texto na parte inferior da imagem */
   left: 40%; /* Centraliza horizontalmente */
   transform: translateX(-1%); /* Ajusta para que o texto fique no centro horizontal */
   color: white; /* Cor do texto */
-  font-size: 30px; /* Tamanho da fonte */
+  font-size: 25px; /* Tamanho da fonte */
   font-weight: bold; /* Destacar o texto */
   padding: 6px;
   border-radius: 5px;
-}
-
-/* Footer translúcido */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: rgba(236, 228, 243, 0.6);
-  color: white;
-  font-size: 12px;
 }
