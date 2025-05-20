@@ -5,54 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - ENEMzada</title>
   <link rel="stylesheet" href="../css/login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">ENEMzada</div>
-    <ul class="nav-list">
-      <a href="../views/index.html" class="nav-link effect-1">Início</a>
-      <a href="../views/cadastro.html" class="nav-link effect-1">Cadastro</a>
-    </ul>
-  </nav>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">ENEMzadas</div>
+      <div class="nav-links">
+        <a href="../views/index.html" class="nav-link effect-1">Início</a>
+        <a href="../views/cadastro.html" class="nav-link effect-1">Cadastro</a>
+      </div>
+    </nav>
+  </header>
 
   <!-- Layout Principal -->
-  <div class="container">
-    <div class="form-left">
-      <h2>JUNTE-SE À NÓS</h2>
-      <form id="login-form">
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
+  <main class="login-container">
+    <div class="login-form-container">
+      <div class="form-content">
+        <h2 class="form-title">Junte-se à nós</h2>
+        <form id="login-form" class="form">
+          <div class="form-group">
+            <label for="email" class="form-label">E-mail:</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="senha" class="form-label">Senha:</label>
+            <input type="password" id="senha" name="senha" class="form-input" required>
+          </div>
 
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" required>
-
-        <button type="submit">Entrar</button>
-      </form>
-      <p class="cadastro-link">
-        <a href="../views/cadastro.html">Não tem uma conta? Cadastre-se</a>
-      </p>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/"><img src="../images/instaCadastro.png" alt="Instagram"></a>
-        <a href="https://www.google.com/intl/pt-BR/account/about/"><img src="../images/googlCadastro.png" alt="Google"></a>
-        <a href="https://br.linkedin.com/"><img src="../images/linkedinCadastro.png" alt="LinkedIn"></a>
+          <button type="submit" class="form-button">Entrar</button>
+        </form>
+        
+        <div class="form-footer">
+          <p class="register-link">
+            <a href="../views/cadastro.html">Não tem uma conta? <span>Cadastre-se</span></a>
+          </p>
+          
+          <div class="social-login">
+            <p class="social-text">Ou entre com:</p>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/" class="social-icon">
+                <img src="../images/logoinsta.png" alt="Instagram">
+              </a>
+              <a href="https://www.google.com/intl/pt-BR/account/about/" class="social-icon">
+                <img src="../images/googlelogo.png" alt="Google">
+              </a>
+              <a href="https://br.linkedin.com/" class="social-icon">
+                <img src="../images/linkedinimg.png" alt="LinkedIn">
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="img-login">
-      <h3> Bem-vindo de volta ao Enemzada! Vamos continuar sua jornada de estudos? </h3>
-      <p> Que bom te ver! Seu próximo passo no ENEM te espera. </p>
-           <img src="../images/img-login.png" alt="Imagem login">
-
+    
+    <div class="login-image-container">
+      <div class="image-content">
+        <h3 class="image-title">Bem-vindo de volta ao Enemzada!</h3>
+        <p class="image-text">Que bom te ver! Seu próximo passo no ENEM te espera.</p>
+        <img src="../images/img-login.png" alt="Imagem login" class="login-image">
+      </div>
     </div>
-  </div>
-
-
-  
+  </main>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 ENEMzadas</p>
+  <footer class="footer">
+    <p class="footer-text">&copy; 2025 ENEMzadas</p>
   </footer>
 
   <script src="../js/app.js"></script>
