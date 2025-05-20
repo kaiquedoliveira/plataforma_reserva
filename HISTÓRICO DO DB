@@ -1,8 +1,8 @@
 //* passo a passo do banco*//  
 
-CREATE DATABASE nome_do_banco;
+CREATE DATABASE plataforma_Enem;
 
-USE nome_do_banco;
+USE plataforma_Enem;
 
 
 CREATE TABLE usuarios (
