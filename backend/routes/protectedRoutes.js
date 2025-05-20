@@ -1,6 +1,14 @@
+// routes/protectedRoutes.js
 const express = require('express');
-const protectedRoutes = require('./routes/protectedRoutes');
+const router = express.Router();
+const verificarToken = require('../middleware/authMiddleware');
 
-const app = express();
+// Rota protegida
+router.get('/test/protected', verificarToken, (req, res) => {
+  res.json({
+    message: 'Acesso autorizado!',
+    userId: req.user.id // ou req.user, se quiser ver todos os dados do usuário
+  });
+});
 
-app.use('/api', protectedRoutes);
+module.exports = router;
