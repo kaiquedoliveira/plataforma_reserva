@@ -1,14 +1,12 @@
 document.getElementById('login-form').addEventListener('submit', function (e) {
-    e.preventDefault(); // Evita que a página recarregue
+    e.preventDefault();
 
     const emailInput = document.getElementById('email');
     const senhaInput = document.getElementById('senha');
 
     fetch('http://localhost:3000/api/auth/login', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             email: emailInput.value,
             senha: senhaInput.value
@@ -17,8 +15,11 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
     .then(res => res.json())
     .then(data => {
         if (data.token) {
-            localStorage.setItem('token', data.token);  // Salva o token
-            window.location.href = 'home.html';         // Redireciona para home
+            localStorage.setItem('token', data.token);
+            localStorage.setItem('usuario', JSON.stringify(data.usuario)); // Salva dados do usuário
+            
+            alert('Login realizado com sucesso!');
+            window.location.href = 'home.html';
         } else {
             alert('Email ou senha incorretos');
         }
