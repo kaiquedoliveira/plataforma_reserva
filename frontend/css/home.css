@@ -1,0 +1,191 @@
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte mais moderna */
+    background-color: #f5f5f5;
+    display: flex;
+    height: 100%;
+    flex-direction: column; /* Organiza o layout da página */
+}
+ 
+ 
+ 
+header {
+    width: 100%;
+    height: 6vh; /* Usa uma medida relativa */
+    background-color: #5e2a84;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0; /* Ajusta o espaço interno */
+}
+
+ 
+/* Logo */
+@keyframes glow {
+    0% {
+      text-shadow: 0 0 5px rgb(200, 163, 207), 0 0 10px rgb(72, 30, 128), 0 0 15px rgb(231, 231, 231), 0 0 20px #46109e;
+    }
+    100% {
+      text-shadow: 0 0 10px rgb(120, 54, 122), 0 0 20px rgb(145, 105, 172), 0 0 30px rgb(255, 255, 255), 0 0 40px #4f0a88;
+    }
+  }
+ 
+.logo {
+    font-size: 26px; /* Aumenta o tamanho da fonte */
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    margin-right: -300px;
+    animation: glow 10.5s infinite alternate, float 3s ease-in-out infinite;
+}
+ 
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('../images/home.page.jpg'); /* Caminho da imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+    width: 100vw; /* Ocupar toda a largura da tela */
+    height: 100vh; /* Ocupar toda a altura da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Garante que os elementos fiquem sobre o fundo */
+}
+ 
+ 
+ 
+/* Barra Lateral */
+.sidebar {
+    width: 270px;
+    height: 100vh;
+    background: rgba(94, 42, 132, 0.2); /* Efeito vidro */
+    backdrop-filter: blur(15px); /* Suaviza o fundo */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    padding-top: 40px;
+    border-radius: 0 1px 16px 0; /* Bordas arredondadas na direita */
+    box-shadow: 8px 0 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+ 
+/* Animação ao passar o mouse */
+.sidebar:hover {
+    background: rgba(94, 42, 132, 0.3); /* Intensifica o efeito vidro */
+    box-shadow: 10px 0 25px rgba(0, 0, 0, 0.4);
+}
+ 
+/* Estilização da lista */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+ 
+/* Itens de menu */
+.sidebar ul li {
+    margin: 15px 0;
+}
+ 
+/* Links do menu */
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 12px 16px;
+    border-radius: 6px;
+    transition: all 0.5s ease;
+}
+ 
+/* Hover estilizado */
+.sidebar ul li a:hover {
+    background: rgba(99, 6, 153, 0.4);
+    transform: translateX(25px) scale(1.05);
+}
+ 
+/* Ícones (opcional) */
+.sidebar ul li a::before {
+    content: ""; /* Substitua por um ícone melhor */
+    font-size: 1.5rem;
+    color: #fff;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+ 
+.sidebar ul li a:hover::before {
+    opacity: 1;
+}
+ 
+ 
+/* Conteúdo Principal */
+.container {
+    display: flex;
+    flex: 1;
+    margin-left: 270px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+   
+}
+ 
+.content-header {
+    text-align: center;
+    margin-bottom: 60px;
+   
+}
+ 
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #891cb4; }
+    50% { text-shadow: 0 0 20px #c77ef7, 0 0 30px #d6a5ff; }
+    100% { text-shadow: 0 0 5px #891cb4; }
+}
+ 
+.content-header h1 {
+    font-size: 6rem;
+    color: #891cb4;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    animation: glow 10.5s infinite ;
+}
+.content-header p {
+    font-size: 2.5rem;
+    color: #f8fbfc;
+    max-width: 800px;
+    margin: 0 auto;
+   
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+ 
+.User {
+    position: absolute;
+    top: 15px;
+    right: 25px;  
+    z-index: 10;
+}
+ 
+.User img {
+    width: 47px;
+    height: auto;
+    cursor: pointer;
+}

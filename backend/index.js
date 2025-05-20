@@ -1,13 +1,48 @@
 const express = require('express');
 const cors = require('cors');
-const app = express();
 const bodyParser = require('body-parser');
-const userRoutes = require('./routes/userRoutes');  // Verifique o nome do arquivo
 
+const app = express();
+
+// Importação de rotas
+const userRoutes = require('./routes/userRoutes');
+const materiasRoutes = require('./routes/materias');
+const conteudosRoutes = require('./routes/conteudos');
+const comentariosRoutes = require('./routes/comentarios');
+const simuladosRoutes = require('./routes/simulados');
+const noticiasRoutes = require('./routes/noticias');
+const cursosRoutes = require('./routes/cursos');
+const usuariosRoutes = require('./routes/usuarios');
+const authRoutes = require('./routes/authRoutes'); // Rotas de autenticação
+const verificarToken = require('./middleware/authMiddleware'); // Middleware de autenticação
+const testRoutes = require('./routes/testRoutes');
+const protectedRoutes = require('./routes/protectedRoutes');
+
+// Middlewares
 app.use(cors());
 app.use(bodyParser.json());
-app.use('/api/users', userRoutes);  // Esta linha mapeia a rota /api/users para o arquivo de rotas
+app.use(express.json());
 
-app.listen(3000, () => {
-  console.log('Servidor rodando na porta 3000');
+// Rotas
+app.use('/api/auth', authRoutes);
+app.use('/api/users', userRoutes);
+app.use('/materias', materiasRoutes);
+app.use('/conteudos', conteudosRoutes);
+app.use('/comentarios', comentariosRoutes);
+app.use('/simulados', simuladosRoutes);
+app.use('/noticias', noticiasRoutes);
+app.use('/cursos', cursosRoutes);
+app.use('/usuarios', usuariosRoutes);
+app.use('/api/test', testRoutes);
+app.use('/api', protectedRoutes); //  rota GET /api/test/protected existe
+
+// ✅ Rota protegida: só acessa se o token for válido
+app.get('/api/home', verificarToken, (req, res) => {
+  res.status(200).json({ message: 'Acesso autorizado à home!' });
+});
+
+// Inicialização do servidor
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
 });

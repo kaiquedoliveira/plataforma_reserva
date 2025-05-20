@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const connection = require('../database/connection');
 
@@ -17,7 +17,7 @@ exports.register = (req, res) => {
     return res.status(400).json({ message: 'Email inválido.' });
   }
 
-  bcrypt.hash(senha, 10, (err, hash) => {
+  bcryptjs.hash(senha, 10, (err, hash) => {
     if (err) return res.status(500).json({ error: err });
 
     const query = 'INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)';

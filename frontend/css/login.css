@@ -66,6 +66,7 @@ body::before {
   animation: glow 1.5s infinite alternate;
 }
 
+
 .logo:hover {
   text-shadow: 0 0 15px rgba(138, 79, 255, 0.8);
 }
@@ -73,6 +74,7 @@ body::before {
 .nav-links {
   display: flex;
   gap: 1.5rem;
+
 }
 
 .nav-link {
@@ -187,6 +189,7 @@ body::before {
   padding: 0.8rem;
   background: var(--primary);
   color: var(--light);
+
   border: none;
   border-radius: 8px;
   font-size: 1rem;
@@ -196,15 +199,23 @@ body::before {
   margin-top: 1rem;
 }
 
+
 .form-button:hover {
   background: #6a30e0;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(138, 79, 255, 0.4);
-}
+
 
 .form-footer {
   margin-top: 2rem;
   text-align: center;
+}
+.miss-button {
+   color: #00aaff; /* Azul claro */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  padding: 6px;
 }
 
 .register-link a {
@@ -398,4 +409,5 @@ body::before {
   .image-title {
     font-size: 1.5rem;
   }
+}
 }

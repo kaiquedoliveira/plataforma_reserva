@@ -1,36 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Canais do YouTube - ENEMzadas</title>
-  <link rel="stylesheet" href="/front-end/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENEMzadas - Página Inicial</title>
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
-  <header>
-    <h1>Canais do YouTube que Recomedamos</h1>
-    <nav>
-      <a href="../views/index.html">Início</a>
-      <a href="../views/youtube.html">YouTube</a>
-      <a href="../views/content-conteudo.html">Conteúdos Recomendados</a>
-      <a href="../views/simulados.html">Simulados Recomendados</a>
-      <a href="../views/noticias.html">Notícias ENEM</a>
-      <a href="../views/cursos.html">Cursos ENEM</a>
-    </nav>
-  </header>
+    <header>
+        <div class="logo">ENEMzada</div>
+    </header>
 
-  <section id="youtube">
-    <h2>Canais Recomendados</h2>
-    <ul>
-      <li><a href="https://www.youtube.com/c/DescomplicaENEM" target="_blank">Descomplica ENEM</a></li>
-      <li><a href="https://www.youtube.com/c/EnemParaTodos" target="_blank">ENEM Para Todos</a></li>
-      <li><a href="https://www.youtube.com/c/GrupoKondZilla" target="_blank">Grupo KondZilla</a></li>
-    </ul>
-  </section>
+    <div class="container">
+        <!-- Sidebar Atualizada -->
+        <aside class="sidebar">
+            <h1>ENEMzada</h1>
+            <div class="profile">
+                <div class="profile-pic"> <img src="../images/foto-user.jpg" alt="Foto do Usuário" /> </div>
+                <p class="username">Username</p>
+                <div class="progress-label">
+                    <p>Seu progresso</p>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li> <i class="fa-solid fa-house space-icon"></i> Início </li>
+                    <hr />
+                    <li> <i class="fa-solid fa-user space-icon"></i> Minha Conta </li>
+                    <hr />
+                    <li> <i class="fa-solid fa-graduation-cap space-icon"></i> Central de Certificados </li>
+                    <hr />
+                    <li> <i class="fa-solid fa-gear space-icon"></i> Administrador </li>
+                    <hr />
+                </ul>
+            </nav>
+            <div class="barra">
+                <nav>
+                    <ul>
+                        <li>Suporte para Alunos</li>
+                        <li>Termos de Uso / Políticas de Privacidade</li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
 
-  <footer>
-    <p>&copy; 2025 Plataforma ENEM</p>
-  </footer>
+        <!-- Conteúdo Principal -->
+        <main class="content">
+            <section class="content-header">
+                <h1>ENEM 2025</h1>
+                <p>Explore os conteúdos, simulados e muito mais para projetar seu futuro com o ENEM!</p>
+            </section>
 
+            <section class="content-grid">
+                <div class="grid-item">
+                    <h2>Matérias</h2>
+                    <p>Estude as matérias essenciais para o Enem 2025.</p>
+                    <a href="#" class="btn">Matérias</a>
+                </div>
+                <div class="grid-item">
+                    <h2>Simulados</h2>
+                    <p>Teste seus conhecimentos com simulados preparados especialmente para o Enem.</p>
+                    <a href="#" class="btn">Simulados</a>
+                </div>
+                <div class="grid-item">
+                    <h2>Cursos</h2>
+                    <p>Acesse cursos recomendados para o Enem e potencialize seu aprendizado.</p>
+                    <a href="./cursos.html" class="btn">Cursos</a>
+                </div>
+                <div class="grid-item">
+                    <h2>Cursos</h2>
+                    <p>Acesse cursos recomendados para o Enem e potencialize seu aprendizado.</p>
+                    <a href="./cursos.html" class="btn">Cursos</a>
+                </div>
+                <div class="grid-item">
+                    <h2>Cursos</h2>
+                    <p>Acesse cursos recomendados para o Enem e potencialize seu aprendizado.</p>
+                    <a href="./cursos.html" class="btn">Cursos</a>
+                </div>
+                <div class="grid-item">
+                    <h2>Cursos</h2>
+                    <p>Acesse cursos recomendados para o Enem e potencialize seu aprendizado.</p>
+                    <a href="./cursos.html" class="btn">Cursos</a>
+                </div>
+                <div class="grid-item">
+                    <h2>Cursos</h2>
+                    <p>Acesse cursos recomendados para o Enem e potencialize seu aprendizado.</p>
+                    <a href="./cursos.html" class="btn">Cursos</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://kit.fontawesome.com/9185a0a212.js" crossorigin="anonymous"></script>
 </body>
 </html>
