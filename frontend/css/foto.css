@@ -1,0 +1,170 @@
+/* Reseta alguns estilos básicos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+/* Estilo global da página */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+ 
+/* Layout do wrapper com sidebar e conteúdo principal */
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+ 
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+ 
+nav ul li {
+    padding: 10px;
+}
+ 
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+ 
+ 
+/* Sidebar lateral com menu de configurações */
+.sidebar {
+  width: 290px;
+  background-color: #eaeaea;
+  padding: 20px;
+}
+ 
+/* Resumo do perfil na sidebar */
+.profile-summary {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 40px; /* Adiciona espaço acima do bloco do perfil */
+}
+ 
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 36px;
+  line-height: 80px;
+  margin: 30px auto 10px auto; /* Aumenta o espaço acima da imagem */
+}
+ 
+/* Menu de configurações */
+.settings-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 45px; /* Espaço acima da ul */
+  margin-bottom: 0; /* Ajuste se quiser espaço abaixo também */
+}
+ 
+.settings-menu ul li {
+  margin-bottom: 10px;
+}
+ 
+.settings-menu ul li a {
+text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+ 
+.settings-menu ul li:hover a,
+.settings-menu ul li.active a {
+  background-color: #5e2a84;
+  color: #fff;
+}
+ 
+ 
+/* Conteúdo principal */
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+ 
+.main-content h1 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: black;
+}
+ 
+.main-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+ 
+/* Área de visualização da imagem */
+.image-preview {
+  width: 300px;
+  height: 300px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+ 
+.image-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+ 
+/* Botão de upload */
+.upload-container {
+  margin-bottom: 20px;
+}
+ 
+.upload-button {
+  background-color: #5e2a84;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+ 
+.upload-button:hover {
+  background-color: #5e2a84;
+}
+ 
+.upload-container input[type="file"] {
+  display: none;
+}
+ 
+/* Botão de salvar */
+.save-button {
+  background-color: #5e2a84;
+  color: #fff;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+ 
+.save-button:hover {
+  background-color: #5e2a84;
+}
+ 

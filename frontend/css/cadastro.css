@@ -173,7 +173,7 @@ input {
 button {
   width: 100%;
   padding: 12px;
-  background: #1a53bc;
+  background: #712c8f;
   color: white;
   border: none;
   border-radius: 6px;
@@ -184,7 +184,7 @@ button {
 }
 
 button:hover {
-  background: #712c8f;
+  background:#461c58;
 }
 
 /* Ícones de redes sociais */

@@ -17,12 +17,14 @@ body {
  
 header {
     width: 100%;
-    height: 7vh; /* Ocupa a tela toda verticalmente */
-    background-color: #5e2a84; /* Cor de fundo */
+    height: 6vh; /* Usa uma medida relativa */
+    background-color: #5e2a84;
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0; /* Ajusta o espaço interno */
 }
+
  
 /* Logo */
 @keyframes glow {

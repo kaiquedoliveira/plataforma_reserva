@@ -159,7 +159,7 @@ input {
 button {
   width: 100%;
   padding: 12px;
-  background: #1e90ff;
+  background: #712c8f;
   color: white;
   border: none;
   border-radius: 6px;
@@ -170,13 +170,20 @@ button {
 }
 
 button:hover {
-  background: #712c8f;
+  background: #461c58;
 }
 
 /* Link para cadastro */
 .cadastro-link {
   text-align: center;
   margin-top: 15px;
+}
+.miss-button {
+   color: #00aaff; /* Azul claro */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  padding: 6px;
 }
 
 .cadastro-link a {
