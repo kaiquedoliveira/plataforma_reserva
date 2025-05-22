@@ -1,41 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre - ENEMzada</title>
-  <link rel="stylesheet" href="../css/sobre.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suporte - Enenzadas</title>
+  <link rel="stylesheet" href="suporte.css" />
 </head>
 <body>
-  <header>
-    <h1>Sobre Nosso Projeto</h1>
-    <nav>
-        <a href="../views/sobre.html">Voltar ao inicío</a> 
-      </nav>
-  </header>
 
-  <section id="sobre">
-    <h2>Quem Somos</h2>
-    <p>
-      A Plataforma ENEM foi criada com o objetivo de oferecer uma ferramenta moderna e acessível para estudantes que desejam se preparar de forma eficaz para o Exame Nacional do Ensino Médio (ENEM). Nosso foco é proporcionar um ambiente de estudo completo, onde você pode encontrar conteúdos recomendados, simulados, cursos online, notícias atualizadas e muito mais.
-    </p>
-    <p>
-      Acreditamos que a preparação para o ENEM deve ser acessível a todos, por isso buscamos parcerias com os melhores conteúdos disponíveis, incluindo vídeos educativos, cursos gratuitos e informações atualizadas sobre o exame. Nossa missão é ser uma plataforma de apoio para todos os estudantes, independentemente de onde eles estejam, oferecendo recursos que ajudem a maximizar o aprendizado e aumentar as chances de sucesso no exame.
-    </p>
-    <h2>O que nós oferecemos</h2>
-    <ul>
-      <li><strong>Simulados</strong> – Testes completos para você avaliar seu desempenho e se preparar para o dia do exame.</li>
-      <li><strong>Conteúdos Recomendados</strong> – Links para os melhores canais do YouTube, cursos online e notícias sobre o ENEM.</li>
-      <li><strong>Fórum e Comunidade</strong> – Um espaço para compartilhar dúvidas, dicas e experiências com outros estudantes.</li>
-      <li><strong>Personalização</strong> – Uma plataforma que se adapta às suas necessidades, com conteúdos focados em suas áreas de interesse e dificuldade.</li>
-    </ul>
-    <p>
-      Nossa equipe é formada por educadores e desenvolvedores apaixonados pelo ensino, e estamos comprometidos em fazer com que você tenha a melhor experiência possível. Se você está se preparando para o ENEM, a Plataforma ENEM é o seu lugar.
-    </p>
-  </section>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1>Enenzadas</h1>
+      <div class="nav-links">
+        <a href="home.html">Início</a>
+        <a href="suporte.html" class="active">Suporte</a>
+      </div>
+    </div>
+  </nav>
 
-  <footer>
-    <p>&copy; 2025 Plataforma ENEM</p>
-  </footer>
+  <!-- Formulário de Suporte -->
+  <div class="container">
+    <h2>Fale com o Suporte</h2>
+    <form id="support-form">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" required></textarea>
+
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('support-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const mensagem = document.getElementById('mensagem').value;
+
+      alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
+      console.log({ nome, email, mensagem });
+      this.reset();
+    });
+  </script>
 </body>
 </html>
